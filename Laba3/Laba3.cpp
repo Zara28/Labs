@@ -258,19 +258,19 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             //    y += 80;
             //}
 
-            ////task6-7
-            //Snowman(hdc, 10, 10);
+           // //task6-7
+           // Snowman(hdc, 10, 10);
 
-            //task8
+           //// task8
 
-            ////task8.1
-            //RECT rect;
-            //GetClientRect(hWnd, &rect);
-            //Snowman(hdc, 10, 10);
-            //Snowman(hdc, 10, rect.bottom-150);
-            //Snowman(hdc, rect.right-100, 10);
-            //Snowman(hdc, rect.right - 100, rect.bottom - 150);
-            //Snowman(hdc, rect.right/2, rect.bottom/2);
+           // //task8.1
+           // RECT rect;
+           // GetClientRect(hWnd, &rect);
+           // Snowman(hdc, 10, 10);
+           // Snowman(hdc, 10, rect.bottom-150);
+           // Snowman(hdc, rect.right-100, 10);
+           // Snowman(hdc, rect.right - 100, rect.bottom - 150);
+           // Snowman(hdc, rect.right/2, rect.bottom/2);
 
 
            // //task8.2
@@ -316,16 +316,16 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             //    y += 80;
             //}
 
-            //hometask
+           // hometask
 
             ////task1
-            //RECT rect;
-            //GetClientRect(hWnd, &rect);
-            //Logo(hdc, 10, 10);
-            //Logo(hdc, 10, rect.bottom-100);
-            //Logo(hdc, rect.right-300, 10);
-            //Logo(hdc, rect.right - 300, rect.bottom - 100);
-            //Logo(hdc, rect.right/2, rect.bottom/2);
+           /* RECT rect;
+            GetClientRect(hWnd, &rect);
+            Logo(hdc, 10, 10);
+            Logo(hdc, 10, rect.bottom-100);
+            Logo(hdc, rect.right-300, 10);
+            Logo(hdc, rect.right - 300, rect.bottom - 100);
+            Logo(hdc, rect.right/2, rect.bottom/2);*/
 
 
             ////task2
@@ -357,18 +357,18 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             //    n += 1;
             //}
 
-            ////task5
-            //int x = 10, y = 10;
-            //for (int i = 0; i < 4; i++)
-            //{
-            //    for (int i = 0; i < 8; i++)
-            //    {
-            //        Logo(hdc, x, y);
-            //        x += 110;
-            //    }
-            //    x = 10;
-            //    y += 80;
-            //}
+            //task5
+            int x = 10, y = 10;
+            for (int i = 0; i < 4; i++)
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    Logo(hdc, x, y);
+                    x += 110;
+                }
+                x = 10;
+                y += 80;
+            }
 
             EndPaint(hWnd, &ps);
         }
