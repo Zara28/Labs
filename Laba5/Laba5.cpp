@@ -12,6 +12,7 @@ WCHAR szTitle[MAX_LOADSTRING];                  // Текст строки за�
 WCHAR szWindowClass[MAX_LOADSTRING];            // имя класса главного окна
 int number = 0;
 int num2 = 0;
+int size = 15;
 
 // Отправить объявления функций, включенных в этот модуль кода:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
@@ -371,16 +372,14 @@ void MyFigure1(HDC hdc, int cx, int cy, int sizeX, int sizeY, COLORREF color) {
 }
 
 
-void BlockMyFigure11(HDC hdc) {
+void BlockMyFigure11(HDC hdc, int sizeX, int sizeY) {
     int y = 50;
-    int sizeY = 10;
 
     int r = 0;
     int b = 0;
     int g = 0;
 
     int x = 50;
-    int sizeX = 10;
 
     while (x < 900) {
         MyFigure1(hdc, x, y, sizeX, sizeY, RGB(r, g, b));
@@ -392,16 +391,14 @@ void BlockMyFigure11(HDC hdc) {
     }
 }
 
-void BlockMyFigure12(HDC hdc) {
+void BlockMyFigure12(HDC hdc, int sizeX, int sizeY) {
     int y = 50;
-    int sizeY = 10;
 
     int r = 0;
     int b = 0;
     int g = 0;
 
     int x = 50;
-    int sizeX = 10;
 
     while (y < 600) {
         MyFigure1(hdc, x, y, sizeX, sizeY, RGB(r, g, b));
@@ -412,16 +409,14 @@ void BlockMyFigure12(HDC hdc) {
         r += 30;
     }
 }
-void BlockMyFigure13(HDC hdc) {
+void BlockMyFigure13(HDC hdc, int sizeX, int sizeY) {
     int y = 50;
-    int sizeY = 10;
 
     int r = 0;
     int b = 0;
     int g = 0;
 
     int x = 50;
-    int sizeX = 10;
 
     while (y < 600) {
         MyFigure1(hdc, x, y, sizeX, sizeY, RGB(r, g, b));
@@ -437,9 +432,8 @@ void BlockMyFigure13(HDC hdc) {
     }
 }
 
-void BlockMyFigure14(HDC hdc) {
+void BlockMyFigure14(HDC hdc, int sizeX, int sizeY) {
     int y = 50;
-    int sizeY = 5;
     while (y < 600)
     {
         int r = 0;
@@ -447,7 +441,6 @@ void BlockMyFigure14(HDC hdc) {
         int g = 0;
 
         int x = 50;
-        int sizeX = 5;
 
         while (x < 600) {
             MyFigure1(hdc, x, y, sizeX, sizeY, RGB(r, g, b));
@@ -485,16 +478,14 @@ void MyFigure2(HDC hdc, int cx, int cy, int sizeX, int sizeY, COLORREF color) {
 }
 
 
-void BlockMyFigure21(HDC hdc) {
+void BlockMyFigure21(HDC hdc, int sizeX, int sizeY) {
     int y = 50;
-    int sizeY = 10;
 
     int r = 0;
     int b = 0;
     int g = 0;
 
     int x = 50;
-    int sizeX = 10;
 
     while (x < 900) {
         MyFigure2(hdc, x, y, sizeX, sizeY, RGB(r, g, b));
@@ -506,16 +497,14 @@ void BlockMyFigure21(HDC hdc) {
     }
 }
 
-void BlockMyFigure22(HDC hdc) {
+void BlockMyFigure22(HDC hdc, int sizeX, int sizeY) {
     int y = 50;
-    int sizeY = 10;
 
     int r = 0;
     int b = 0;
     int g = 0;
 
     int x = 50;
-    int sizeX = 10;
 
     while (y < 600) {
         MyFigure2(hdc, x, y, sizeX, sizeY, RGB(r, g, b));
@@ -526,16 +515,14 @@ void BlockMyFigure22(HDC hdc) {
         r += 30;
     }
 }
-void BlockMyFigure23(HDC hdc) {
+void BlockMyFigure23(HDC hdc, int sizeX, int sizeY) {
     int y = 50;
-    int sizeY = 10;
 
     int r = 0;
     int b = 0;
     int g = 0;
 
     int x = 50;
-    int sizeX = 10;
 
     while (y < 600) {
         MyFigure2(hdc, x, y, sizeX, sizeY, RGB(r, g, b));
@@ -551,9 +538,8 @@ void BlockMyFigure23(HDC hdc) {
     }
 }
 
-void BlockMyFigure24(HDC hdc) {
+void BlockMyFigure24(HDC hdc, int sizeX, int sizeY) {
     int y = 50;
-    int sizeY = 5;
     while (y < 600)
     {
         int r = 0;
@@ -561,7 +547,6 @@ void BlockMyFigure24(HDC hdc) {
         int g = 0;
 
         int x = 50;
-        int sizeX = 5;
 
         while (x < 600) {
             MyFigure2(hdc, x, y, sizeX, sizeY, RGB(r, g, b));
@@ -608,34 +593,34 @@ void task2(int n, HDC hdc)
         BlockArrow4(hdc);
     }
 }
-void task3(int n, HDC hdc)
+void task3(int n, HDC hdc, int sizex, int sizey)
 {
     if (n == 1)
     {
         //task1
-        BlockMyFigure11(hdc);
+        BlockMyFigure11(hdc, sizex, sizey);
         //task 2
-        BlockMyFigure12(hdc);
+        BlockMyFigure12(hdc, sizex, sizey);
         //task 3
-        BlockMyFigure13(hdc);
+        BlockMyFigure13(hdc, sizex, sizey);
     }
     else {
-        BlockMyFigure14(hdc);
+        BlockMyFigure14(hdc, sizex, sizey);
     }
 }
-void task4(int n, HDC hdc)
+void task4(int n, HDC hdc, int sizex, int sizey)
 {
     if (n == 1)
     {
         //task1
-        BlockMyFigure21(hdc);
+        BlockMyFigure21(hdc, sizex, sizey);
         //task 2
-        BlockMyFigure22(hdc);
+        BlockMyFigure22(hdc, sizex, sizey);
         //task 3
-        BlockMyFigure23(hdc);
+        BlockMyFigure23(hdc, sizex, sizey);
     }
     else {
-        BlockMyFigure24(hdc);
+        BlockMyFigure24(hdc, sizex, sizey);
     }
 }
 void rec(int x, int y, int sizex, int sizey, HDC hdc, COLORREF color)
@@ -643,13 +628,11 @@ void rec(int x, int y, int sizex, int sizey, HDC hdc, COLORREF color)
     MyFigure1(hdc, x + sizex, y, sizex, sizey, color);
     MyFigure1(hdc, x - sizex, y, sizex, sizey, color);
 }
-void task5(HDC hdc)
+void task5(HDC hdc, int sizex, int sizey)
 {
     int x = 500;
     int y = 50;
     int r = 0; int g = 0, b = 0;
-    int sizex = 5;
-    int sizey = 5;
     for (int i = 0; i < 13; i++)
     {
         int j = 0;
@@ -689,48 +672,28 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     case WM_KEYDOWN:
         switch (wParam)
         {
-        case VK_F1:
-            number = 1;
+        case VK_RIGHT:
+            number += 1;
+            InvalidateRect(hWnd, NULL, TRUE);
+            break;
+        case VK_LEFT:
+            number -= 1;
+            InvalidateRect(hWnd, NULL, TRUE);
+            break;
+        case VK_UP:
+            size+=20;
+            InvalidateRect(hWnd, NULL, TRUE);
+            break;
+        case VK_DOWN:
+            size -= 20;
+            InvalidateRect(hWnd, NULL, TRUE);
+            break;
+        case VK_LSHIFT:
             num2 = 1;
             InvalidateRect(hWnd, NULL, TRUE);
             break;
-        case VK_F2:
-            number = 1;
+        case VK_RSHIFT:
             num2 = 2;
-            InvalidateRect(hWnd, NULL, TRUE);
-            break;
-        case VK_F3:
-            number = 2;
-            num2 = 1;
-            InvalidateRect(hWnd, NULL, TRUE);
-            break;
-        case VK_F4:
-            number = 2;
-            num2 = 2;
-            InvalidateRect(hWnd, NULL, TRUE);
-            break;
-        case VK_F5:
-            number = 3;
-            num2 = 1;
-            InvalidateRect(hWnd, NULL, TRUE);
-            break;
-        case VK_F6:
-            number = 3;
-            num2 = 2;
-            InvalidateRect(hWnd, NULL, TRUE);
-            break;
-        case VK_F7:
-            number = 4;
-            num2 = 1;
-            InvalidateRect(hWnd, NULL, TRUE);
-            break;
-        case VK_F8:
-            number = 4;
-            num2 = 2;
-            InvalidateRect(hWnd, NULL, TRUE);
-            break;
-        case VK_F9:
-            number = 5;
             InvalidateRect(hWnd, NULL, TRUE);
             break;
         }
@@ -748,15 +711,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             }
             if (number == 3)
             {
-                task3(num2, hdc);
+                task3(num2, hdc, size, size);
             }
             if (number == 4)
             {
-                task4(num2, hdc);
+                task4(num2, hdc, size, size);
             }
             if (number == 5)
             {
-                task5(hdc);
+                task5(hdc, size, size);
             }
             EndPaint(hWnd, &ps);
         }

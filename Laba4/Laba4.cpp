@@ -10,7 +10,7 @@
 HINSTANCE hInst;                                // текущий экземпляр
 WCHAR szTitle[MAX_LOADSTRING];                  // Текст строки заголовка
 WCHAR szWindowClass[MAX_LOADSTRING];            // имя класса главного окна
-
+int number = 0;
 // Отправить объявления функций, включенных в этот модуль кода:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
 BOOL                InitInstance(HINSTANCE, int);
@@ -651,13 +651,31 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             }
         }
         break;
+    case WM_KEYDOWN:
+        switch (wParam)
+        {
+        case VK_RIGHT:
+            number += 1;
+            InvalidateRect(hWnd, NULL, TRUE);
+            break;
+        case VK_LEFT:
+            number -= 1;
+            InvalidateRect(hWnd, NULL, TRUE);
+            break;
+        
+        }
     case WM_PAINT:
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
             // TODO: Добавьте сюда любой код прорисовки, использующий HDC...
-           // RecursiveImage1_1(hdc, 200, 160, 80);
-            /*RecursiveImage1_2(hdc, 550, 150, 80);
+            switch (number)
+            {
+            case 1:
+                RecursiveImage1_1(hdc, 200, 160, 80);
+                break;
+            case 2:
+                RecursiveImage1_2(hdc, 550, 150, 80);
             RecursiveImage1_3(hdc, 800, 150, 80);
 
             RecursiveImage1_4(hdc, 80, 400, 80);
@@ -666,37 +684,55 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             RecursiveImage1_6(hdc, 550, 400, 80);
 
-            RecursiveImage1_7(hdc, 800, 500, 80);*/
+            RecursiveImage1_7(hdc, 800, 500, 80);
+                break;
+            case 3:
+                RecursiveImage2_1(hdc, 200, 100, 80);
+                RecursiveImage2_2(hdc, 400, 150, 60);
+                RecursiveImage2_3(hdc, 600, 150, 60);
+                RecursiveImage2_4(hdc, 800, 100, 80);
+                break;
+            case 4:
+                RecursiveImage2_5(hdc, 200, 400, 80);
+                RecursiveImage2_6(hdc, 600, 400, 80);
+                RecursiveImage2_7(hdc, 800, 400, 80);
+                RecursiveImage2_8(hdc, 1000, 400, 80);
 
-          /*  RecursiveImage2_1(hdc, 200, 100, 80);
-            RecursiveImage2_2(hdc, 400, 150, 60);
-            RecursiveImage2_3(hdc, 600, 150, 60);
-            RecursiveImage2_4(hdc, 800, 100, 80);
-
-            RecursiveImage2_5(hdc, 200, 400, 80);
-            RecursiveImage2_6(hdc, 600, 400, 80);
-            RecursiveImage2_7(hdc, 800, 400, 80);
-            RecursiveImage2_8(hdc, 1000, 400, 80);*/
-
-            /*RecursiveImage3_1(hdc, 100, 100, 60);
-            RecursiveImage3_2(hdc, 500, 200, 60);
-            RecursiveImage3_3(hdc, 800, 200, 60);
-            RecursiveImage3_4(hdc, 100, 400, 60);
-            RecursiveImage3_5(hdc, 500, 400, 60);*/
-
-           /* RecursiveImage4_1(hdc, 100, 100, 80);
+                break;
+            case 5:
+                RecursiveImage3_1(hdc, 100, 100, 60);
+                RecursiveImage3_2(hdc, 500, 200, 60);
+                RecursiveImage3_3(hdc, 800, 200, 60);
+                RecursiveImage3_4(hdc, 100, 400, 60);
+                RecursiveImage3_5(hdc, 500, 400, 60);
+                break;
+            case 6:
+                 RecursiveImage4_1(hdc, 100, 100, 80);
 
             RecursiveImage4_2(hdc, 450, 100, 80);
 
             RecursiveImage4_3(hdc, 800, 100, 80);
 
-            RecursiveImage4_4(hdc, 150, 300, 80);*/
-            //RecursiveImage5_1(hdc, 200, 200, 80);
-            //RecursiveImage5_1(hdc, 500, 100, 20);/*
-            RecursiveImage6_1(hdc, 200, 200, 60);
+            RecursiveImage4_4(hdc, 150, 300, 80);
+                break;
+            case 7: 
+                RecursiveImage5_1(hdc, 200, 200, 80);
+            RecursiveImage5_1(hdc, 500, 100, 20);
+                break;
+            case 8:
 
-            RecursiveImage7_1(hdc, 500, 200, 60);
-            RecursiveImage9_1(hdc, 800, 200, 60);
+                RecursiveImage6_1(hdc, 200, 200, 60);
+                break;
+            case 9:
+                RecursiveImage7_1(hdc, 500, 200, 60);
+                break;
+            case 10:
+                RecursiveImage9_1(hdc, 800, 200, 60);
+                break;
+            }
+
+
+            
             EndPaint(hWnd, &ps);
         }
         break;

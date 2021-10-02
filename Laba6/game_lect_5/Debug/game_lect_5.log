@@ -1,0 +1,14 @@
+﻿  game_lect_5.cpp
+D:\моя папка\институт\ОАиП\лабы\Labs\Laba6\game_lect_5\game_lect_5.cpp(153,69): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\моя папка\институт\ОАиП\лабы\Labs\Laba6\game_lect_5\game_lect_5.cpp(153,49): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\моя папка\институт\ОАиП\лабы\Labs\Laba6\game_lect_5\game_lect_5.cpp(153,31): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\моя папка\институт\ОАиП\лабы\Labs\Laba6\game_lect_5\game_lect_5.cpp(154,69): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\моя папка\институт\ОАиП\лабы\Labs\Laba6\game_lect_5\game_lect_5.cpp(154,49): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\моя папка\институт\ОАиП\лабы\Labs\Laba6\game_lect_5\game_lect_5.cpp(154,31): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\моя папка\институт\ОАиП\лабы\Labs\Laba6\game_lect_5\game_lect_5.cpp(155,69): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\моя папка\институт\ОАиП\лабы\Labs\Laba6\game_lect_5\game_lect_5.cpp(155,49): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\моя папка\институт\ОАиП\лабы\Labs\Laba6\game_lect_5\game_lect_5.cpp(155,31): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\моя папка\институт\ОАиП\лабы\Labs\Laba6\game_lect_5\game_lect_5.cpp(156,69): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\моя папка\институт\ОАиП\лабы\Labs\Laba6\game_lect_5\game_lect_5.cpp(156,49): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\моя папка\институт\ОАиП\лабы\Labs\Laba6\game_lect_5\game_lect_5.cpp(156,31): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  game_lect_5.vcxproj -> D:\моя папка\институт\ОАиП\лабы\Labs\Laba6\game_lect_5\Debug\game_lect_5.exe
