@@ -656,7 +656,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
             // TODO: Добавьте сюда любой код прорисовки, использующий HDC...
-            RecursiveImage1_1(hdc, 200, 160, 80);
+           // RecursiveImage1_1(hdc, 200, 160, 80);
             /*RecursiveImage1_2(hdc, 550, 150, 80);
             RecursiveImage1_3(hdc, 800, 150, 80);
 
@@ -668,7 +668,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             RecursiveImage1_7(hdc, 800, 500, 80);*/
 
-           /* RecursiveImage2_1(hdc, 200, 100, 80);
+          /*  RecursiveImage2_1(hdc, 200, 100, 80);
             RecursiveImage2_2(hdc, 400, 150, 60);
             RecursiveImage2_3(hdc, 600, 150, 60);
             RecursiveImage2_4(hdc, 800, 100, 80);
@@ -678,13 +678,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             RecursiveImage2_7(hdc, 800, 400, 80);
             RecursiveImage2_8(hdc, 1000, 400, 80);*/
 
-            //RecursiveImage3_1(hdc, 100, 100, 60);
-            //RecursiveImage3_2(hdc, 500, 200, 60);
-            //RecursiveImage3_3(hdc, 800, 200, 60);
-            //RecursiveImage3_4(hdc, 100, 400, 60);
-            //RecursiveImage3_5(hdc, 500, 400, 60);
+            /*RecursiveImage3_1(hdc, 100, 100, 60);
+            RecursiveImage3_2(hdc, 500, 200, 60);
+            RecursiveImage3_3(hdc, 800, 200, 60);
+            RecursiveImage3_4(hdc, 100, 400, 60);
+            RecursiveImage3_5(hdc, 500, 400, 60);*/
 
-            /*RecursiveImage4_1(hdc, 100, 100, 80);
+           /* RecursiveImage4_1(hdc, 100, 100, 80);
 
             RecursiveImage4_2(hdc, 450, 100, 80);
 
@@ -693,10 +693,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             RecursiveImage4_4(hdc, 150, 300, 80);*/
             //RecursiveImage5_1(hdc, 200, 200, 80);
             //RecursiveImage5_1(hdc, 500, 100, 20);/*
-            /*RecursiveImage6_1(hdc, 200, 200, 60);
+            RecursiveImage6_1(hdc, 200, 200, 60);
 
             RecursiveImage7_1(hdc, 500, 200, 60);
-            RecursiveImage9_1(hdc, 800, 200, 60);*/
+            RecursiveImage9_1(hdc, 800, 200, 60);
             EndPaint(hWnd, &ps);
         }
         break;

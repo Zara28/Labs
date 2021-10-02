@@ -246,31 +246,31 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             //}
 
             ////task5
-            //int x = 10, y = 10;
-            //for (int i = 0; i < 4; i++)
-            //{
-            //    for (int i = 0; i < 8; i++)
-            //    {
-            //        StClausAuto(hdc, x, y);
-            //        x += 40;
-            //    }
-            //    x = 10;
-            //    y += 80;
-            //}
+           /* int x = 10, y = 10;
+            for (int i = 0; i < 4; i++)
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    StClausAuto(hdc, x, y);
+                    x += 40;
+                }
+                x = 10;
+                y += 80;
+            }*/
 
-           // //task6-7
-           // Snowman(hdc, 10, 10);
+            ////task6-7
+            //Snowman(hdc, 10, 10);
 
            //// task8
 
-           // //task8.1
-           // RECT rect;
-           // GetClientRect(hWnd, &rect);
-           // Snowman(hdc, 10, 10);
-           // Snowman(hdc, 10, rect.bottom-150);
-           // Snowman(hdc, rect.right-100, 10);
-           // Snowman(hdc, rect.right - 100, rect.bottom - 150);
-           // Snowman(hdc, rect.right/2, rect.bottom/2);
+            ////task8.1
+            //RECT rect;
+            //GetClientRect(hWnd, &rect);
+            //Snowman(hdc, 10, 10);
+            //Snowman(hdc, 10, rect.bottom-150);
+            //Snowman(hdc, rect.right-100, 10);
+            //Snowman(hdc, rect.right - 100, rect.bottom - 150);
+            //Snowman(hdc, rect.right/2, rect.bottom/2);
 
 
            // //task8.2
@@ -328,37 +328,37 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             Logo(hdc, rect.right/2, rect.bottom/2);*/
 
 
-            ////task2
-            //int x = 0, n = 0;
-            //while (n<8)
-            //{
-            //    Logo(hdc, x, 10);
-            //    x += 110;
-            //    n += 1;
-            //}
+            //task2
+            int x = 0, n = 0;
+            while (n<8)
+            {
+                Logo(hdc, x, 10);
+                x += 110;
+                n += 1;
+            }
 
-            ////task3
-            //int y = 100;
-            //n = 0;
-            //while (n<4)
-            //{
-            //    Logo(hdc, x, y);
-            //    y += 100;
-            //    n += 1;
-            //}
+            //task3
+            int y = 100;
+            n = 0;
+            while (n<4)
+            {
+                Logo(hdc, x, y);
+                y += 100;
+                n += 1;
+            }
 
-            ////task4
-            //y = 200, x = 40, n = 0;
-            //while (n < 4)
-            //{
-            //    Logo(hdc, x, y);
-            //    x += 110;
-            //    y += 100;
-            //    n += 1;
-            //}
+            //task4
+            y = 200, x = 40, n = 0;
+            while (n < 4)
+            {
+                Logo(hdc, x, y);
+                x += 110;
+                y += 100;
+                n += 1;
+            }
 
             //task5
-            int x = 10, y = 10;
+         /*   int x = 10, y = 10;
             for (int i = 0; i < 4; i++)
             {
                 for (int i = 0; i < 8; i++)
@@ -368,7 +368,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 }
                 x = 10;
                 y += 80;
-            }
+            }*/
 
             EndPaint(hWnd, &ps);
         }
