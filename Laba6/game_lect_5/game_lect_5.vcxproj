@@ -154,6 +154,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="game_lect_5.cpp" />
+    <ClCompile Include="Laba1.cpp" />
+    <ClCompile Include="Laba2.cpp" />
+    <ClCompile Include="Laba3.cpp" />
+    <ClCompile Include="Laba4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game_lect_5.rc" />
