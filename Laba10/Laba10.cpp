@@ -65,29 +65,31 @@ int loadLevel(struct Level* level) {
 	return 1;
 }
 
+char filename2[] = "D:\\моя папка\\институт\\ОАиП\\лабы\\Labs\\Laba10\\2.txt";
 
 int saveLevel(struct Level* level) {
-	FILE* fin = fopen(filename, "rt");
+	FILE* fin = fopen(filename, "wt");
 
 	if (fin == NULL) {
 		printf("File %s is not opened", filename);
 		return 0;
 	}
 
-	fprintf(fin, "%d", level->n);
-	fprintf(fin, "%d", level->m);
+	fprintf(fin, "%d ", level->n);
+	fprintf(fin, "%d\n", level->m);
 
 	for (int i = 0; i < level->n; i++) {
 		for (int j = 0; j < level->m; j++) {
-			fprintf(fin, "%d", level->map[i][j]);
+			fprintf(fin, "%d ", level->map[i][j]);
 		}
+		fprintf(fin, "\n");
 	}
 
-	fprintf(fin, "%d", level->entry.i);
-	fprintf(fin, "%d", level->entry.j);
+	fprintf(fin, "%d ", level->entry.i);
+	fprintf(fin, "%d\n", level->entry.j);
 
-	fprintf(fin, "%d", level->exit.i);
-	fprintf(fin, "%d", level->exit.j);
+	fprintf(fin, "%d ", level->exit.i);
+	fprintf(fin, "%d\n", level->exit.j);
 
 	fclose(fin);
 	return 1;
@@ -212,6 +214,9 @@ int main()
 		case 4:
 			addMinColumn(&g);
 			break;
+		case 5:
+				saveLevel(&g);
+				break;
 		}
 		printLevel(&g);
 
@@ -222,6 +227,7 @@ int main()
 		printf("2: deleteChoose\n");
 		printf("3: deleteMaxColumn\n");
 		printf("4: addMinColumn\n");
+		printf("5: saveLevel\n");
 		printf("-1:  Exit\n");
 
 		scanf("%d", &k);
