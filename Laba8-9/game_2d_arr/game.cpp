@@ -70,6 +70,7 @@ void WriteInFile()
 			{
 				fprintf(fout, "%5d", a[i][j]);
 			}
+			fprintf(fout, "\n");
 		}
 	fclose(fout);
 
@@ -333,6 +334,31 @@ void to_end()
 			j++;
 		}
 		i++;
+	}
+}
+
+void doMidasHand(int i, int j)
+{
+	if (a[i][j] == 2)
+	{
+		a[i][j] = 1;
+		if (i > 0) doMidasHand(i - 1, j);
+		if (i < N - 1) doMidasHand(i + 1, j);
+		if (j > 0) doMidasHand(i, j - 1);
+		if (j < M - 1) doMidasHand(i, j + 1);
+	}
+}
+void MidasHandToRight()
+{
+	for (int i = 0; i < N; ++i)
+	{
+		for (int j = 0; j < M-1; j++)
+		{
+			if (a[i][j] == 3 && a[i][j + 1] == 2)
+			{
+				doMidasHand(i, j + 1);
+			}
+		}
 	}
 }
 int sizeX = 36;

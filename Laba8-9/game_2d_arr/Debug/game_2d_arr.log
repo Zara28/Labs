@@ -1,3 +1,3 @@
-﻿  game.cpp
-D:\моя папка\институт\ОАиП\лабы\Labs\Laba8-9\game_2d_arr\game.cpp(39,7): warning C4101: k: неиспользованная локальная переменная
+﻿  game_2d_arr.cpp
+D:\моя папка\институт\ОАиП\лабы\Labs\Laba8-9\game_2d_arr\game_2d_arr.cpp(135,19): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   game_2d_arr.vcxproj -> D:\моя папка\институт\ОАиП\лабы\Labs\Laba8-9\game_2d_arr\Debug\game_2d_arr.exe

@@ -177,6 +177,10 @@ break;
             randomMove(); //M - random move
             InvalidateRect(hWnd, NULL, TRUE);
             break;
+        case 0x48://H - hand of Midas
+            MidasHandToRight();
+            InvalidateRect(hWnd, NULL, TRUE);
+            break;
         case 0x4e: // N - New  
             generateLevel();
             InvalidateRect(hWnd, NULL, TRUE);

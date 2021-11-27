@@ -27,3 +27,5 @@ bool EndGame();
 void randomMove();
 void WriteInFile(); 
 void ReadFromFile();
+void MidasHandToRight();
+void doMidasHand(int i, int j);
